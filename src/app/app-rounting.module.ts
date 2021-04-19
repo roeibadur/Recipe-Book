@@ -8,7 +8,7 @@ const appRoutes: Routes = [
     { path: 'auth' , loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule) }
 ];
 @NgModule({
-    imports: [RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules, initialNavigation: 'enabled' })],
+    imports: [RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules, initialNavigation: 'enabled', relativeLinkResolution: 'legacy' })],
     exports: [RouterModule]
 })
 export class AppRountingModule {}
